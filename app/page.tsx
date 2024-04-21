@@ -1,7 +1,22 @@
+'use client'
+import { useState } from 'react'
+import Header from './components/Header'
+import AddTask from './components/AddTask'
 
+const page = () => {
+  
+  const [task, setTask] = useState("");
+  const handleCreateTask = async() =>{
 
-export default function Home() {
+  }
+
   return (
- <h1>Hello Alphazero</h1>
-  );
+    <>
+      <Header />
+      <AddTask task={task} setTask={setTask} 
+      handleCreateTask={handleCreateTask} />
+    </>
+  )
 }
+
+export default page
